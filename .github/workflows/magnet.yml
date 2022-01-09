@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -19,7 +19,7 @@ jobs:
         run: npm install
 
       - name: Initial
-        run: node src/test.js ${{ github.event.inputs.url }}
+        run: node src/get.js ${{ github.event.inputs.url }}
 
       - name: Check Directory
         run: ls
