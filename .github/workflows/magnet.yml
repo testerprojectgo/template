@@ -1,17 +1,14 @@
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
+      url:
+        description: 'Magnet URL'     
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+        default: 'Magnet URL'
   
 jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Log level: ${{ github.event.inputs.logLevel }}"
-        echo "Tags: ${{ github.event.inputs.tags }}" 
+        echo "MAGNET: ${{ github.event.inputs.url }}"
