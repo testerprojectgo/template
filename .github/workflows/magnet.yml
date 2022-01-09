@@ -17,9 +17,6 @@ jobs:
 
       - name: NPM Install
         run: npm install
-        
-      - name: NPM Install Global
-        run: npm install webtorrent-cli -g
 
       - name: Initial
         run: node src/get.js ${{ github.event.inputs.url }}
