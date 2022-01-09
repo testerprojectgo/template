@@ -1,0 +1,28 @@
+{
+    "main": "src/server.js",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/testerprojectgo/template.git"
+    },
+    "keywords": [
+      "HLS",
+      "MKV",
+      "MP4",
+      "Encode",
+      "Static",
+      "Video"
+    ],
+    "author": "Tester Project Go",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/testerprojectgo/template/issues"
+    },
+    "homepage": "https://github.com/testerprojectgo/template#readme",
+    "dependencies": {
+      "@ffmpeg-installer/ffmpeg": "^1.1.0",
+      "fluent-ffmpeg": "^2.1.2"
+    }
+  }

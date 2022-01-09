@@ -4,11 +4,29 @@ on:
       url:
         description: 'Magnet URL'     
         required: true
-        default: 'Magnet URL'
   
 jobs:
-  printInputs:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
     steps:
-    - run: |
-        echo "MAGNET: ${{ github.event.inputs.url }}"
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: NPM Install
+        run: npm install
+
+      - name: Initial
+        run: node src/test.js ${{ github.event.inputs.url }}
+
+      - name: Compile
+        run: |
+          echo "COMPILED"
+      
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@4.1.1
+      #   with:
+      #     branch: gh-pages # The branch the action should deploy to.
+      #     folder: build # The folder the action should deploy.
