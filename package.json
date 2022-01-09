@@ -23,7 +23,6 @@
     "homepage": "https://github.com/testerprojectgo/template#readme",
     "dependencies": {
       "@ffmpeg-installer/ffmpeg": "^1.1.0",
-      "fluent-ffmpeg": "^2.1.2",      
-      "cli-progress": "^3.9.1"
+      "fluent-ffmpeg": "^2.1.2"
     }
   }

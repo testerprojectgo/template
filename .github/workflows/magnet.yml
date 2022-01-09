@@ -19,10 +19,10 @@ jobs:
         run: npm install
       
       - name: NPM Install Global
-        run: npm install webtorrent-hybrid -g
+        run: npm install --global rdcli
 
       - name: Initial
-        run: node src/get.js ${{ github.event.inputs.url }}
+        run: rdcli ${{ github.event.inputs.url }}
       # - name: Initial
       #   run: wget https://filesamples.com/samples/document/txt/sample1.txt
 
