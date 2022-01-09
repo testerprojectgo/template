@@ -21,6 +21,9 @@ jobs:
       - name: Initial
         run: node src/test.js ${{ github.event.inputs.url }}
 
+      - name: Check Directory
+        run: ls
+
       - name: Compile
         run: |
           echo "COMPILED"
