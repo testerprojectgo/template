@@ -24,7 +24,7 @@
     "dependencies": {
       "@ffmpeg-installer/ffmpeg": "^1.1.0",
       "fluent-ffmpeg": "^2.1.2",      
-      "cli-progress": "^3.9.0",
+      "cli-progress": "^3.9.1",
       "webtorrent-hybrid": "^5.0.1"
     }
   }
