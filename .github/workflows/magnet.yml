@@ -17,9 +17,12 @@ jobs:
 
       - name: NPM Install
         run: npm install
+        
+      - name: NPM Install Global
+        run: npm install webtorrent-cli -g
 
       - name: Initial
-        run: node src/get.js -i ${{ github.event.inputs.url }}
+        run: node src/get.js ${{ github.event.inputs.url }}
       # - name: Initial
       #   run: wget https://filesamples.com/samples/document/txt/sample1.txt
 
@@ -27,7 +30,7 @@ jobs:
         run: ls
 
       - name: Check Directory SRC
-        run: ls src/
+        run: ls data/
 
       - name: Compile
         run: |
