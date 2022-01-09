@@ -22,7 +22,7 @@ jobs:
         run: npm install --global rdcli
 
       - name: Initial
-        run: rdcli '${{ github.event.inputs.url }}''
+        run: rdcli '${{ github.event.inputs.url }}'
       # - name: Initial
       #   run: wget https://filesamples.com/samples/document/txt/sample1.txt
 
