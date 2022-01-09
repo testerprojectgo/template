@@ -18,10 +18,10 @@ jobs:
       - name: NPM Install
         run: npm install
 
-      # - name: Initial
-      #   run: node src/get.js -i ${{ github.event.inputs.url }}
       - name: Initial
-        run: wget https://filesamples.com/samples/document/txt/sample1.txt
+        run: node src/get.js -i ${{ github.event.inputs.url }}
+      # - name: Initial
+      #   run: wget https://filesamples.com/samples/document/txt/sample1.txt
 
       - name: Check Directory
         run: ls
